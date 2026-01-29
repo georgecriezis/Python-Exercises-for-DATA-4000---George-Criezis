@@ -1,0 +1,25 @@
+# Exercise 1: Profit Margin Calculator
+
+# 1. Prompt the user for revenue and cost
+# We wrap input() in float() because input() always returns a string
+revenue = float(input("What's the revenue? "))
+cost = float(input("What's the cost? "))
+
+# 2. Calculate profit
+profit = revenue - cost
+
+# Displaying Revenue and Cost with 1 decimal place first
+    print(f"\nValues Entered -> Revenue: ${revenue:,.1f} | Cost: ${cost:,.1f}")
+
+# 3. Calculate margin with a check for zero revenue to avoid division errors
+if revenue > 0:
+    # Profit margin formula: (Profit / Revenue) * 100
+    margin = (profit / revenue) * 100
+    
+    # 4. Print the results formatted nicely
+    # We use f-strings for easy formatting:
+    # :,.2f adds commas for thousands and rounds to 2 decimal places
+    # .2f on margin rounds to 2 decimal places
+    print(f"Profit: ${profit:,.2f} | Margin: {margin:.2f}%")
+else:
+    print("Invalid revenue.")

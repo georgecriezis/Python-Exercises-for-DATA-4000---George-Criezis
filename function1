@@ -1,10 +1,19 @@
-# this code greets the user by name
+# --- Your existing functions stay at the top ---
 
-def hello(to):
-    print(f"Hello, {to}")
+# --- The Execution Logic (Add this part!) ---
 
-name = input("Enter your name: ").title()
-hello(name)
+# 1. Get the inputs from the user
+revenue_input = float(input("What's the revenue? "))
+cost_input = float(input("What's the cost? "))
 
-#output without passing expected argument
-hello()
+# 2. Use your math logic
+# Note: We can bypass the units_sold functions if you just want to input total revenue/cost directly
+profit = revenue_input - cost_input
+
+# 3. Handle the margin calculation with a safety check
+if revenue_input > 0:
+    margin = (profit / revenue_input) * 100
+    # 4. Print the exact format you requested
+    print(f"Profit: ${profit:,.2f} | Margin: {margin:.2f}%")
+else:
+    print("Invalid revenue.")
