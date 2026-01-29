@@ -1,5 +1,0 @@
-# This program asks the user for a number then prints the squared value of that number
-num = float(input("Enter a number: "))
-squared = num ** 2
-print(f"The squared value of {num} is {squared}")
-
