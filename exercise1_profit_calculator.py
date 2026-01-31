@@ -9,7 +9,7 @@ cost = float(input("What's the cost? "))
 profit = revenue - cost
 
 # Displaying Revenue and Cost with 1 decimal place first
-    print(f"\nValues Entered -> Revenue: ${revenue:,.1f} | Cost: ${cost:,.1f}")
+print(f"\nValues Entered -> Revenue: ${revenue:,.1f} | Cost: ${cost:,.1f}")
 
 # 3. Calculate margin with a check for zero revenue to avoid division errors
 if revenue > 0:
